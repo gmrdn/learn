@@ -2,7 +2,7 @@
 
 context('Actions', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:4200/')
+      cy.visit('http://localhost:4200/heroes')
     })
   
     it('afficher détail du premier héro de la liste', () => {
