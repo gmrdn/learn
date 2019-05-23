@@ -18,6 +18,7 @@ describe('DashboardComponent', () => {
 
   it('should contain "Top Heroes"', () => {
     TestBed.configureTestingModule({
+      imports: [ RouterTestingModule.withRoutes([])],
       declarations: [ DashboardComponent ]
     })
     const fixture = TestBed.createComponent(DashboardComponent);

@@ -13,8 +13,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
