@@ -1,12 +1,15 @@
-import { TestBed } from '@angular/core/testing';
-
 import { HeroService } from './hero.service';
 
 describe('HeroService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
-    const service: HeroService = TestBed.get(HeroService);
-    expect(service).toBeTruthy();
+  const messageMock = {
+    add: jest.fn()
+  };
+
+  it('should write message "HeroService: fetched heroes" when getting heroes', () => {
+    const service = new HeroService(messageMock as any);
+    service.getHeroes();
+    expect(messageMock.add).toHaveBeenCalledTimes(1);
+    expect(messageMock.add).toHaveBeenCalledWith('HeroService: fetched heroes');
   });
 });

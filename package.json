@@ -15,6 +15,15 @@
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
       "<rootDir>/setupJest.ts"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/app"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/app/**/*.ts",
+      "!**/node_modules/**",
+      "!**/vendor/**"
     ]
   },
   "private": true,
@@ -40,10 +49,13 @@
     "@angular/cli": "^7.3.8",
     "@angular/compiler-cli": "~8.0.0-rc.2",
     "@angular/language-service": "~8.0.0-rc.2",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/jest": "^24.0.13",
     "@types/node": "~8.9.4",
+    "babel-jest": "^24.8.0",
     "codelyzer": "~4.5.0",
     "cypress": "^3.2.0",
     "jasmine-core": "~2.99.1",
