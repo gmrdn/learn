@@ -34,9 +34,7 @@ jobs:
 
       # run tests!
       - run: yarn test
-      
-      # e2e
-      - run: yarn run start 
+       
 
   release:
     docker:
