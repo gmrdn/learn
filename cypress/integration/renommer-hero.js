@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 
-context('Actions', () => {
+context('Hero\'s details', () => {
     beforeEach(() => {
       cy.visit('http://localhost:4200/heroes')
     })
   
-    it('renommer le premier héro de la liste', () => {
+    it('should allow to edit the name', () => {
       cy.get('ul.heroes>li:first-child').click()
       cy.get('app-hero-detail input#name')
         .clear()
