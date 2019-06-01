@@ -1,12 +1,8 @@
 /// <reference types="Cypress" />
-import { tz } from 'moment-timezone';
 
 context('Dashboard', () => {
 
   beforeEach(() => {
-    var nowNY = tz("America/New_York").format()
-    cy.clock(Date.UTC(nowNY), ['Date']);
-
     cy.visit('/dashboard')
   })
 
