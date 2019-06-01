@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  tour-of-heroes:
+    build: ./
+    ports:
+      - "4200:4200"
+    networks:
+      - frontend
+  cypress:
+    image: "cypress/included:3.3.1"
+    depends_on:
+      - tour-of-heroes
+    environment:
+      - CYPRESS_baseUrl=http://tour-of-heroes:4200
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    networks:
+      - frontend
+
+networks:
+  frontend:

@@ -2,7 +2,7 @@
 
 context('Hero\'s details', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:4200/heroes')
+      cy.visit('/heroes')
     })
   
     it('should allow to edit the name', () => {

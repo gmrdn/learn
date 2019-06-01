@@ -2,7 +2,7 @@
 
 context('Hero Detail', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:4200/heroes')
+    cy.visit('/heroes')
   })
 
   it('should display the hero\'s details after we click on him (start of list)', () => {

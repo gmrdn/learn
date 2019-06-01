@@ -7,7 +7,7 @@ context('Dashboard', () => {
     var nowNY = tz("America/New_York").format()
     cy.clock(Date.UTC(nowNY), ['Date']);
 
-    cy.visit('http://localhost:4200/dashboard')
+    cy.visit('/dashboard')
   })
 
   it('should display 4 heroes', () => {
