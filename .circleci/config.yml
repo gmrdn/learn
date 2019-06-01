@@ -36,12 +36,9 @@ jobs:
       - run: yarn test
   
   integration:
-    docker:
-     #run all commands in this image:
-     - image: dziamid/ubuntu-docker-compose #ubuntu + docker + docker-compose
+    machine: true
     steps:
      - checkout
-     - setup_remote_docker
     #  - run:
     #      #need to login so we can pull private repos from hub in the following runs
     #      name: Login 
