@@ -75,4 +75,6 @@ workflows:
   build_and_integrate:
     jobs:
       - build
-      - integration
+      - integration:
+          requires:
+            - build
