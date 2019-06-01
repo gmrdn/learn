@@ -69,3 +69,10 @@ jobs:
   #        name: Deploy
   #        command: |
   # # deployment is out of scope of this article
+
+workflows:
+  version: 2
+  build_and_integrate:
+    jobs:
+      - build
+      - integration
